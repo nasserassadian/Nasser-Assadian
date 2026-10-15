@@ -3,309 +3,488 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The official portfolio of Nasser Assadian, a painter working in oil and acrylic on canvas.">
-<title>Nasser Assadian — Artist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#211713">
+<meta name="description" content="Nasser Assadian — Contemporary painter. Explore selected paintings and artistic practice.">
+<title>Nasser Assadian | Artist & Painter</title>
+
 <style>
 :root {
-  --bg: #151513;
-  --panel: #1c1c19;
-  --text: #e9e6df;
-  --muted: #a19d94;
-  --line: #35342f;
-  --accent: #c7bda8;
+  --bg: #211713;
+  --panel: #291e19;
+  --dark: #17100e;
+  --cream: #d9c7a0;
+  --gold: #a89470;
+  --text: #d1c2ad;
+  --muted: #a99a89;
+  --line: rgba(202,180,139,.65);
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
 }
+
 a { color: inherit; text-decoration: none; }
+
 header {
-  min-height: 78px;
-  padding: 24px 7%;
+  min-height: 76px;
+  padding: 22px 5.5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
-  border-bottom: 1px solid var(--line);
+  gap: 24px;
+  border-bottom: 1px solid rgba(202,180,139,.16);
+  background: #251a15;
 }
-.brand {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 3px;
+
+.logo {
+  font-size: 21px;
+  letter-spacing: -1px;
+  color: var(--cream);
   white-space: nowrap;
 }
+
 nav {
-  display: flex;
-  gap: 27px;
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: var(--muted);
-}
-nav a:hover, .social a:hover { color: var(--text); }
-.hero {
-  min-height: 430px;
-  padding: 105px 10% 95px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-bottom: 1px solid var(--line);
-}
-.kicker {
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-h1 {
-  font-size: clamp(48px, 8vw, 88px);
-  font-weight: 400;
-  line-height: 1.04;
-  letter-spacing: -2.5px;
-  margin: 25px 0 22px;
-}
-.hero p {
-  max-width: 430px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.9;
-}
-section { padding: 78px 10%; }
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 35px;
-}
-h2 {
-  font-size: 31px;
-  font-weight: 400;
-  margin: 0;
-}
-.eyebrow {
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 20px;
-  row-gap: 35px;
-}
-.work { min-width: 0; }
-.art-image {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  background: var(--panel);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid #292925;
-}
-.art-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.placeholder {
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #77736a;
-}
-.caption { padding-top: 14px; }
-.caption h3 {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0 0 7px;
-}
-.caption p {
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  letter-spacing: .5px;
-  color: var(--muted);
-  margin: 0;
-}
-.about {
-  border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 65px;
-}
-.about h2 { margin-top: 20px; }
-.about-copy {
-  max-width: 570px;
-  color: #b7b3aa;
-  font-size: 15px;
-  line-height: 2.1;
-  margin: 0;
-}
-.contact {
-  background: #1c1c19;
-  border-top: 1px solid var(--line);
-}
-.contact h2 { margin: 18px 0; }
-.contact p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.9;
-}
-.social {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
-  margin-top: 28px;
+  justify-content: flex-end;
+}
+
+nav a {
   font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+nav a:hover { color: var(--cream); }
+
+main { overflow: hidden; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5%;
+  padding: 65px 7% 85px;
+  background: #1b120f;
+}
+
+.hero-art {
+  position: relative;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame {
+  position: absolute;
+  border: 1px solid var(--line);
+  pointer-events: none;
+}
+
+.frame.one {
+  width: 83%;
+  height: 88%;
+  transform: translate(-13px,-15px);
+}
+
+.frame.two {
+  width: 83%;
+  height: 88%;
+  transform: translate(13px,15px);
+  opacity: .65;
+}
+
+.art-placeholder {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+  height: 335px;
+  background: #342720;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #b8a58a;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.hero-copy { text-align: center; }
+
+.eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  font-weight: 400;
+  color: var(--cream);
+}
+
+h1 {
+  font-size: clamp(35px, 4.4vw, 61px);
+  letter-spacing: -2.5px;
+  line-height: 1.15;
+  margin: 24px 0 15px;
+}
+
+.hero-copy p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.outline-btn {
+  display: inline-block;
+  margin-top: 23px;
+  padding: 13px 27px;
+  border: 1px solid var(--line);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--cream);
+  text-transform: uppercase;
+  transition: background .2s;
+}
+
+.outline-btn:hover { background: #39291f; }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 38px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 0 auto 38px;
+  max-width: 560px;
+}
+
+.section-heading h2 {
+  font-size: clamp(34px, 4vw, 48px);
+  letter-spacing: -1.5px;
+  margin: 0 0 15px;
+}
+
+.section-heading p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.portfolio { background: #2a1e18; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.art-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.art-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #392a20;
+  border: 1px solid rgba(202,180,139,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  color: #b8a58a;
   font-size: 9px;
   letter-spacing: 2px;
+  transition: border-color .25s, background .25s;
 }
-.social a {
-  padding-bottom: 8px;
-  border-bottom: 1px solid #77736a;
+
+.art-card:hover .art-image {
+  border-color: var(--gold);
+  background: #403026;
 }
+
+.art-card figcaption {
+  padding-top: 12px;
+  color: var(--cream);
+  font-size: 13px;
+}
+
+.art-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+  background: #211713;
+}
+
+.about-copy h2 {
+  font-size: clamp(34px, 4vw, 48px);
+  margin: 12px 0 20px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2.1;
+}
+
+.about-image {
+  position: relative;
+  padding: 16px;
+}
+
+.about-image .frame {
+  inset: 0;
+}
+
+.about-image .art-placeholder {
+  width: 100%;
+  height: 320px;
+}
+
+.contact {
+  background: #2a1e18;
+  text-align: center;
+}
+
+.contact form {
+  width: min(100%, 440px);
+  margin: 30px auto 0;
+  padding: 30px;
+  background: #19110e;
+  border: 1px solid rgba(202,180,139,.2);
+  text-align: left;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px 4px;
+  margin-bottom: 18px;
+  border: none;
+  border-bottom: 1px solid rgba(202,180,139,.35);
+  background: transparent;
+  color: var(--cream);
+  font: 12px Arial, sans-serif;
+  outline: none;
+  border-radius: 0;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder { color: #aa9985; }
+
+.contact textarea {
+  resize: vertical;
+  min-height: 75px;
+}
+
+.contact button {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 14px;
+  background: var(--cream);
+  color: #261912;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
 footer {
-  padding: 25px 7%;
+  padding: 30px 7%;
+  background: #17100e;
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
-  color: #89857c;
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  color: var(--muted);
+  font-size: 11px;
 }
-@media (max-width: 760px) {
+
+footer a { color: var(--cream); }
+
+@media (max-width: 700px) {
   header {
-    padding: 22px 6%;
+    padding: 20px 5%;
     align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
   }
-  nav { gap: 20px; }
-  .hero { padding: 80px 7%; min-height: 350px; }
-  section { padding: 55px 7%; }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 13px; }
-  .about { grid-template-columns: 1fr; gap: 25px; }
-  h2 { font-size: 27px; }
-}
-@media (max-width: 360px) {
-  nav { gap: 13px; font-size: 8px; }
-  .gallery { grid-template-columns: 1fr; }
+
+  nav {
+    justify-content: flex-start;
+    gap: 17px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 45px 6% 60px;
+    gap: 35px;
+  }
+
+  .hero-art { min-height: 310px; }
+  .art-placeholder { height: 270px; }
+
+  .section { padding: 55px 5%; }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 13px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image { order: -1; }
+
+  .contact form { padding: 22px; }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
 </head>
-<body>
 
+<body>
 <header>
-  <a class="brand" href="#">NASSER ASSADIAN</a>
-  <nav>
-    <a href="#works">WORKS</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
+  <a class="logo" href="#home">NASSER ASSADIAN</a>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="kicker">Artist · Oil &amp; Acrylic</div>
-    <h1>Art, emotion<br>and the inner self.</h1>
-    <p>A collection of paintings exploring the human figure, inner worlds and the quiet emotions beneath the surface.</p>
+  <section class="hero" id="home">
+    <div class="hero-art">
+      <div class="frame one"></div>
+      <div class="frame two"></div>
+      <div class="art-placeholder">FEATURED PAINTING</div>
+    </div>
+    <div class="hero-copy">
+      <div class="eyebrow">Artist · Painter</div>
+      <h1>Nasser Assadian</h1>
+      <p>Exploring emotion, identity and the inner world through painting.</p>
+      <a class="outline-btn" href="#portfolio">View Portfolio</a>
+      <div class="socials">
+        <a href="https://www.instagram.com/naserasadian_art/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </section>
 
-  <section id="works">
+  <section class="section portfolio" id="portfolio">
     <div class="section-heading">
-      <h2>Selected Works</h2>
-      <span class="eyebrow">Portfolio · Paintings</span>
+      <h2>Portfolio</h2>
+      <p>A selection of paintings exploring emotion, realism and the human experience.</p>
     </div>
     <div class="gallery" id="gallery"></div>
   </section>
 
-  <section class="about" id="about">
-    <div>
-      <div class="kicker">About the Artist</div>
-      <h2>Nasser Assadian</h2>
+  <section class="section about" id="about">
+    <div class="about-copy">
+      <div class="eyebrow">The artist</div>
+      <h2>About Me</h2>
+      <p>I am Nasser Assadian, a painter working with oil and acrylic on canvas. My practice explores inner identity, emotion and the relationship between realism and the unseen world.</p>
+      <p>Each painting is an attempt to give form to an inner experience through the human figure, atmosphere and detail.</p>
     </div>
-    <p class="about-copy">
-      Nasser Assadian is a painter working in oil and acrylic on canvas.
-      His practice explores realism, the human figure and the emotional
-      dimensions of inner experience. Through each work, he searches for
-      a connection between outward appearance and the inner self.
-    </p>
+    <div class="about-image">
+      <div class="frame"></div>
+      <div class="art-placeholder">ARTIST PORTRAIT</div>
+    </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="kicker">Get in Touch</div>
-    <h2>Contact</h2>
-    <p>For enquiries, collaborations and exhibition opportunities.</p>
-    <div class="social">
-      <a href="https://www.instagram.com/naserasadian_art/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener">YOUTUBE ↗</a>
+  <section class="section contact" id="contact">
+    <div class="section-heading">
+      <h2>Contact Me</h2>
+      <p>For artwork inquiries, collaborations and other messages.</p>
     </div>
+    <form id="contact-form">
+      <input name="name" type="text" placeholder="YOUR NAME" required>
+      <input name="email" type="email" placeholder="YOUR EMAIL" required>
+      <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
+      <button type="submit">SEND MESSAGE</button>
+    </form>
   </section>
 </main>
 
 <footer>
-  <span>© NASSER ASSADIAN</span>
-  <span>ARTIST PORTFOLIO</span>
+  <span>NASSER ASSADIAN</span>
+  <span>Oil & Acrylic on Canvas</span>
+  <a href="https://www.instagram.com/naserasadian_art/" target="_blank" rel="noopener">Instagram ↗</a>
+  <span>© <span id="year"></span> All rights reserved</span>
 </footer>
 
 <script>
-const artworks = Array.from({ length: 20 }, (_, i) => ({
-  title: "Artwork " + String(i + 1).padStart(2, "0"),
-  medium: "Oil & Acrylic on Canvas",
-  image: ""
-}));
-
 const gallery = document.getElementById("gallery");
 
-artworks.forEach((art, index) => {
-  const card = document.createElement("article");
-  card.className = "work";
-
-  const frame = document.createElement("div");
-  frame.className = "art-image";
-
-  if (art.image) {
-    const img = document.createElement("img");
-    img.src = art.image;
-    img.alt = art.title + " by Nasser Assadian";
-    img.loading = "lazy";
-    frame.appendChild(img);
-  } else {
-    const placeholder = document.createElement("span");
-    placeholder.className = "placeholder";
-    placeholder.textContent = "ARTWORK " + String(index + 1).padStart(2, "0");
-    frame.appendChild(placeholder);
-  }
-
-  const caption = document.createElement("div");
-  caption.className = "caption";
-
-  const title = document.createElement("h3");
-  title.textContent = art.title;
-
-  const details = document.createElement("p");
-  details.textContent = art.medium;
-
-  caption.appendChild(title);
-  caption.appendChild(details);
-  card.appendChild(frame);
-  card.appendChild(caption);
+for (let i = 1; i <= 20; i++) {
+  const number = String(i).padStart(2, "0");
+  const card = document.createElement("figure");
+  card.className = "art-card";
+  card.innerHTML = `
+    <div class="art-image">PAINTING ${number}</div>
+    <figcaption>Untitled <small>Oil & Acrylic on Canvas</small></figcaption>
+  `;
   gallery.appendChild(card);
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const data = new FormData(this);
+  const subject = encodeURIComponent("Artwork inquiry from " + data.get("name"));
+  const body = encodeURIComponent(
+    "Name: " + data.get("name") +
+    "\nEmail: " + data.get("email") +
+    "\n\n" + data.get("message")
+  );
+  window.location.href = "mailto:?subject=" + subject + "&body=" + body;
 });
 </script>
-
 </body>
 </html>
